@@ -27,11 +27,25 @@ Park.prototype.mostAttractive = function (){
    return mostAttractiveDino
 }
 
+Park.prototype.findBySpecies = function (species){
+    const dinosBySpecies = []
+    for (const dino of this.dinos){
+        if (dino.species === species){
+            dinosBySpecies.push(dino)}
+    }
+    return dinosBySpecies
+}
+Park.prototype.findVisitorsByDay = function (){
+    let totalVisitors = 0
+    for (const dino of this.dinos){
+        totalVisitors +=dino.guestsAttractedPerDay}
+    return totalVisitors
+}
+
+Park.prototype.findVisitorsByYear = function (){
+    return this.findVisitorsByDay()*365}
+
 // Park.prototype.addDinosaur = function (dino){
-//     this.dinos.push(dino)
-// }
-// Park.prototype.addDinosaur = function (dino){
-//     this.dinos.push(dino)
-// }
+//     this.dinos.push(dino)}
 
 module.exports = Park
