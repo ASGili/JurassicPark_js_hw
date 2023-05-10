@@ -45,7 +45,7 @@ Park.prototype.findVisitorsByDay = function (){
 Park.prototype.findVisitorsByYear = function (){
     return this.findVisitorsByDay()*365}
 
-// Park.prototype.addDinosaur = function (dino){
-//     this.dinos.push(dino)}
+Park.prototype.totalRevenueByYear = function (){
+    return this.findVisitorsByYear()*this.price}
 
 module.exports = Park

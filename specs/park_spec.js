@@ -75,7 +75,12 @@ describe('Park', function() {
   });
 
   it('should be able to calculate total revenue for one year', function(){
-
+    dino1 = new Dinosaur('T-Rex','Meat',30)
+    dino2 = new Dinosaur('Trice','Meat',20)
+    dino3 = new Dinosaur('Bill','Meat',10)
+    park.dinos = [dino1,dino2,dino3]
+    const actual = park.totalRevenueByYear()
+    assert.strictEqual(actual,328500)
   });
 
 });
